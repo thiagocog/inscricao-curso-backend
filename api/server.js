@@ -11,14 +11,14 @@ const app = express();
 app.use(express.json()); // faz o trabalho do body-parser, que está depreciado.
 app.use(cors()); // filtro que permite criar requisitos de acesso à app.
 
-
+router(app);
 
 // TODO: levantar o serviço
 const port = 3000;
 
 app.listen(port, () => {
   console.log(`Server listening on port localhost:${port}.`);
-})
+});
 
 // Exportação do módulo
-export default app;
+module.exports = app;
