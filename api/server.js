@@ -14,11 +14,11 @@ app.use(cors()); // filtro que permite criar requisitos de acesso à app.
 router(app);
 
 // TODO: levantar o serviço
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
   console.log(`Server listening on port localhost:${port}.`);
 });
 
 // Exportação do módulo
-module.exports = app;
+export default app;

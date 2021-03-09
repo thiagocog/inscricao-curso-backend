@@ -15,7 +15,6 @@ module.exports = (app) => {
 
   cursoRoutesV1(router);
 
-  // cursoRouterV1(router)
-  app.use('/v1', router);
+  app.use('/v1', router); // o app vai começar em /v1 e a partir desta vai utilizar as rotas criadas com o router.
 
 };

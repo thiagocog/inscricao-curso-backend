@@ -1,4 +1,4 @@
-require('./api/server');
+import './api/server';
 
 const { version, name } = require('./package.json');
 
