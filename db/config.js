@@ -18,7 +18,7 @@ if (node_environment === 'development') {
 // };
 
 module.exports = {
-  database: 'iscricao-cursos',
+  database: 'inscricao-cursos',
   username: 'root',
   password: null,
   host: 'localhost',

@@ -11,8 +11,8 @@ module.exports = (sequelize, DataTypes) => {
         unique: true,
         allowNull: false
       },
-      // coordinator: DataTypes.TEXT,
       name: DataTypes.TEXT,
+      coordinator: DataTypes.TEXT,
       start_date: DataTypes.DATE,
       status: DataTypes.BOOLEAN
     },
