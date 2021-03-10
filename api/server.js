@@ -21,4 +21,4 @@ app.listen(port, () => {
 });
 
 // Exportação do módulo
-export default app;
+module.exports = app;

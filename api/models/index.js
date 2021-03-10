@@ -15,8 +15,10 @@ if(config.use_env_variable) {
 }
 
 
-const modelUser = require('./curso');
-db.curso = modelUser(sequelize, Sequelize.DataTypes);
+const modelCurso = require('./Curso');
+db.curso = modelCurso(sequelize, Sequelize.DataTypes);
+
+
 
 
 // fs

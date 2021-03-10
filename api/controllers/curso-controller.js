@@ -1,4 +1,4 @@
-const db = require('../models/index');
+const db = require('../models/Index');
 
 const getAllCursos = (req, res, next) => {
 
@@ -24,6 +24,22 @@ const getAllCursos = (req, res, next) => {
 };
 
 
+const getCursoById = (req, res) => {
+  db.curso.findOne({
+    where: {
+      id: req.params.idcurso
+    },
+    // attributes: ['id', 'name', 'status']
+  }). then((result) => {
+    res.status(200).send(result)
+  })
+
+}
+
+
+
+
 module.exports = {
-  getAllCursos
+  getAllCursos,
+  getCursoById
 };
