@@ -1,7 +1,10 @@
-const config = require(__dirname + '/../../db/config.js');
 const path = require('path');
 const fs = require('fs');
 const Sequelize = require('sequelize');
+
+const config = require(__dirname + '/../../db/config.js');
+const modelCurso = require('./Curso');
+const modelInscricao = require('./Inscricao');
 
 
 const db = {};
@@ -9,17 +12,14 @@ const db = {};
 let sequelize;
 
 if(config.use_env_variable) {
-  sequelize = new Sequelize(process.env[config.use_env_variable], config);
+  sequelize = new Sequelize(process.env[config.use_env_variable], config)
 } else {
-  sequelize = new Sequelize(config.database, config.username, config.password, config);
+  sequelize = new Sequelize(config.database, config.username, config.password, config)
 }
 
 
-const modelCurso = require('./Curso');
-db.curso = modelCurso(sequelize, Sequelize.DataTypes);
-
-
-
+db.curso = modelCurso(sequelize, Sequelize.DataTypes)
+db.inscricao = modelInscricao(sequelize, Sequelize.DataTypes)
 
 // fs
 //   .readdirSync(__dirname)
@@ -37,7 +37,6 @@ db.curso = modelCurso(sequelize, Sequelize.DataTypes);
 //     db[modelName].associate(db);
 //   }
 // });
-
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;

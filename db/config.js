@@ -17,10 +17,22 @@ if (node_environment === 'development') {
 //   logging: false
 // };
 
+
+
+// module.exports = {
+//   database: 'inscricao-cursos',
+//   username: 'root',
+//   password: 'root',
+//   host: 'localhost',
+//   port: '3306',
+//   dialect: 'mysql',
+//   logging: false
+// };
+
 module.exports = {
-  database: 'inscricao-cursos',
+  database: 'inscricao-alunos',
   username: 'root',
-  password: null,
+  password: 'root',
   host: 'localhost',
   port: '3306',
   dialect: 'mysql',
