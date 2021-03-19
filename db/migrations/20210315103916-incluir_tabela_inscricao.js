@@ -10,32 +10,31 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      aluno_name: {
+      name: {
         allowNull: false,
         type: Sequelize.TEXT
       },
-      aluno_email: {
+      email: {
         allowNull: false,
         type: Sequelize.TEXT
       },
-      aluno_data_nascimento: {
+      data_nascimento: {
         allowNull: false,
         type: Sequelize.DATE
       },
       curso_id: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
         references: {
           model: 'cursos', 
           key:'id'
         },
-        onDelete: 'CASCADE',
-        type: Sequelize.INTEGER
+        onDelete: 'CASCADE'
       }
     })
   },
 
-  down: async (queryInterface, Sequelize) => {
-    
+  down: async (queryInterface, Sequelize) => { 
     return queryInterface.dropTable('inscricoes');
-
   }
-};
+}

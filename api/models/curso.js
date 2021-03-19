@@ -30,6 +30,6 @@ module.exports = (sequelize, DataTypes) => {
     })
   }
 
-  return cursos;
+  return cursos
 
 }

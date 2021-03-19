@@ -9,16 +9,16 @@ module.exports = (sequelize, DataTypes) => {
         unique: true,
         allowNull: false
       },
-      aluno_name: DataTypes.TEXT,
-      aluno_email: DataTypes.TEXT,
-      aluno_data_nascimento: DataTypes.DATE,
+      name: DataTypes.TEXT,
+      email: DataTypes.TEXT,
+      data_nascimento: DataTypes.DATE,
     },
     {
       underscored: true,
       paranoid: true,
       timestamps: false
     }
-  );
+  )
 
   inscricoes.associate = function (models) {
     inscricoes.belongsTo(models.cursos, {
