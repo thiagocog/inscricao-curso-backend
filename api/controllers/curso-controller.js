@@ -31,7 +31,7 @@ const getCursoById = async (req, res, next) => {
       name: result.name,
       coordinator: result.coordinator,
       status: result.status,
-      subscriptions: result.subscriptions
+      subscriptions: result.inscricoes
     } 
     
     res.status(200).send(data)
